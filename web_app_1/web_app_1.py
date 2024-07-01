@@ -26,7 +26,7 @@ def send_data():
         'argument_3': argument_3
     }
     try:
-        response = requests.post('http://127.0.0.1:5001/receive_data', json= data)
+        response = requests.post('http://127.0.0.1:5011/receive_data', json= data)
         if response.status_code == 200:
             return 'Data sent successfully!'
         else:
@@ -35,5 +35,5 @@ def send_data():
         return f'Error sending data: {e}'
 
 if __name__ == '__main__':
-    app.run(host="127.0.0.1",port=5000)
+    app.run(host="127.0.0.1",port=5010)
 
